@@ -22,6 +22,12 @@ body{
     height: calc(100vh - 100px);
     overflow: auto;
 }
+
+.container-footer{
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+}
 /* ----FULLSCREEN BUTTONS---- */
 .screen-cmd{
     width: 100%;
@@ -75,13 +81,10 @@ body{
 }
 /* ----FOOTER ZOOM COMMAND---- */
 .zoom-cmd{
-    width: 100%;
     background-color: #333;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding-left:20px;
-    flex-wrap: wrap;
+    padding-left:10px;
 }
 /* ----PERSONAL COMMAND---- */
 .personal-cmd, .action-cmd{
@@ -93,7 +96,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .cmd span{
@@ -102,7 +104,7 @@ body{
 
 .cmd-ico{
     font-family: "Font Awesome 5 Free";
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .personal-cmd .cmd-ico:hover{
@@ -118,7 +120,7 @@ body{
     content: '\f077';
     font-weight: 900;
     font-size: 10px;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .mute::before{
@@ -176,16 +178,33 @@ body{
 }
 /* ----LOGOUT--- */
 .logout{
-    height: 100px;
     line-height: 100px;
-    font-size: 25px;
+    font-size: 20px;
     background-color: rgb(98, 94, 94);
-    padding: 0 20px;
-    margin-left: 20px;
+    padding: 0 10px;
+    margin-left: 10px;
     color: darkred;
 }
 
 .logout:hover{
     background-color: darkred;
     color:white;
+}
+
+@media screen and (max-width: 1050px){
+    .logout span{
+        display: none;
+    }
+    
+    .logout::before{
+        font-family: "Font Awesome 5 Free";
+        font-size: 20px;
+        content: '\f2f5';
+        font-weight:900 ;
+        color:darkred;
+    }
+
+    .logout:hover{
+        background-color: rgb(98, 94, 94);
+    }
 }
