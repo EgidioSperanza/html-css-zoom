@@ -31,12 +31,17 @@ body{
     margin-right: 10px;
     border-radius: 5px;
 }
+
+.screen-cmd span:hover{
+    color:green;
+}
 /* ----CONNECTED USERS PREVIEW---- */
 .users-connected{
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin:20px 0;
 }
 
 .user-img{
@@ -55,7 +60,7 @@ body{
 
 .user-name::before{
     font-family: "Font Awesome 5 Free";
-    content: '\f131\0020 Pinco Pallo';
+    content: '\f131\0020 John Doe';
     font-weight: 900;
     position: absolute;
     bottom:0;
@@ -95,7 +100,11 @@ body{
     font-size: 35px;
 }
 
-.cmd-ico:hover{
+.personal-cmd .cmd-ico:hover{
+    color:darkred;
+}
+
+.action-cmd .cmd-ico:hover{
     color: green;
 }
 
@@ -168,4 +177,9 @@ body{
     background-color: rgb(98, 94, 94);
     padding: 0 20px;
     color: darkred;
+}
+
+.logout:hover{
+    background-color: darkred;
+    color:white;
 }
